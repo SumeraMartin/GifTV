@@ -1,0 +1,21 @@
+//
+//  ServiceProvider.swift
+//  GifTV
+//
+//  Created by Martin Sumera on 22/04/2017.
+//  Copyright © 2017 Martin Sumera. All rights reserved.
+//
+
+protocol ServiceProviderType: class {
+    var categoriesService: CategoriesService { get }
+    var giphyService: GiphyService { get }
+    var spotifyService: SpotifyService { get }
+    var gifTrackService: GifTrackService { get }
+}
+
+final class ServiceProvider: ServiceProviderType {
+    lazy var categoriesService: CategoriesService = CategoriesService(provider: self)
+    lazy var giphyService: GiphyService = GiphyService(provider: self)
+    lazy var spotifyService: SpotifyService = SpotifyService(provider: self)
+    lazy var gifTrackService: GifTrackService = GifTrackService(provider: self)
+}
