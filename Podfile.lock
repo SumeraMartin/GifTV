@@ -9,6 +9,11 @@ PODS:
   - Gloss (1.2.4)
   - ReactorKit (0.2.0):
     - RxSwift (>= 3.0.0)
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
+  - RealmSwift (2.6.2):
+    - Realm (= 2.6.2)
   - RxCocoa (3.4.0):
     - RxSwift (~> 3.4)
   - RxDataSources (1.0.3):
@@ -28,6 +33,7 @@ DEPENDENCIES:
   - Gifu
   - Gloss (~> 1.2)
   - ReactorKit
+  - RealmSwift
   - RxCocoa (~> 3.1)
   - RxDataSources (~> 1.0)
   - RxGesture
@@ -40,12 +46,14 @@ SPEC CHECKSUMS:
   Gifu: 56a4d8f1092399159fa32662aa2232158b48d8ac
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   ReactorKit: e9a57be0441a28878c418f5fea0f8f2587570563
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
+  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
   RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
   RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxGesture: 1f770b247c69e8133fb8f4ef263571efd0ae91a1
   RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
   RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
 
-PODFILE CHECKSUM: df0eaff7b7198518c784afe213650663f59f5387
+PODFILE CHECKSUM: a76888a12bfac35e4e7d32d0e13b6bd6024e6f39
 
 COCOAPODS: 1.2.1

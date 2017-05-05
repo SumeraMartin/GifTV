@@ -23,5 +23,7 @@ target 'GifTV' do
   # GifPlayer
   pod 'Gifu'
   
-
+  # Persistence
+  pod 'RealmSwift'
+  
 end

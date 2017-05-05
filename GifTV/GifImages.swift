@@ -10,13 +10,19 @@ import Gloss
 
 struct GifImages: Decodable {
     
-    let original: GifOriginalImage
+    let original: GifUrlImage
     
+    let fixedWidthThumbnail: GifUrlImage
+        
     public init?(json: JSON) {
-        guard let original: GifOriginalImage = "original" <~~ json else {
+        guard let original: GifUrlImage = "original" <~~ json else {
+            return nil
+        }
+        guard let fixedWidthThumbnail: GifUrlImage = "fixed_width_downsampled" <~~ json else {
             return nil
         }
         self.original = original
+        self.fixedWidthThumbnail = fixedWidthThumbnail
     }
     
 }

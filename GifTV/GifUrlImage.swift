@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct GifOriginalImage: Decodable {
+struct GifUrlImage: Decodable {
     
     let url: String
     

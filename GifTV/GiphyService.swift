@@ -18,10 +18,11 @@ protocol GiphyServiceType {
 class GiphyService: BaseService, GiphyServiceType  {
     
     func downloadGif(byQuery query: String) -> Observable<GifSaved> {
-        URLCache.shared.removeAllCachedResponses()
         return self.getGifCount(byQuery: query)
-            .flatMap { count in self.getGif(byQuery: query, withOffset: (0...min(1000,count)).random) }
-            .flatMap { gif in self.downloadGif(gif) }
+            .flatMap { self.getGif(byQuery: query, withOffset: (0...min(1000, $0)).random) }
+            .flatMap { self.downloadGifThumbnail($0) }
+            .map { $0.gif }
+            .flatMap { self.downloadGif($0) }
     }
     
     private func downloadGif(_ gif: Gif) -> Observable<GifSaved> {
@@ -39,6 +40,31 @@ class GiphyService: BaseService, GiphyServiceType  {
                         observer.onError(error)
                     } else if let imagePath = response.destinationURL?.path {
                         observer.onNext(GifSaved(gif, imagePath))
+                        observer.onCompleted()
+                    }
+            }
+            
+            return Disposables.create(with: {
+                request.cancel()
+            })
+        }
+    }
+    
+    private func downloadGifThumbnail(_ gif: Gif) -> Observable<GifSaved> {
+        return Observable.create { observer in
+            let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                let fileURL = documentsURL.appendingPathComponent(gif.id)
+                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+            }
+            
+            let request = Alamofire
+                .download(gif.images.original.url, to: destination)
+                .responseData { response in
+                    if let error = response.error {
+                        observer.onError(error)
+                    } else {
+                        observer.onNext(GifSaved(gif, gif.id))
                         observer.onCompleted()
                     }
             }
@@ -94,14 +120,14 @@ class GiphyService: BaseService, GiphyServiceType  {
     
 extension GiphyService {
     
-    static let api = "http://api.giphy.com/v1/gifs/"
-    static let apiKey = "dc6zaTOxFJmzC"
-    
     enum Router: URLRequestConvertible {
         case search(query: String, offset: Int)
         case count(query: String)
+        case random
+        case trending
         
         static let baseURLString = "http://api.giphy.com/v1/gifs/"
+        static let apiKey = "dc6zaTOxFJmzC"
         
         var method: HTTPMethod {
             return .get
@@ -111,9 +137,13 @@ extension GiphyService {
             let result: (path: String, parameters: Parameters) = {
                 switch self {
                     case let .search(query, offset):
-                        return ("search", ["q": query, "limit": 1, "offset": offset, "api_key": apiKey])
+                        return ("search", ["q": query, "limit": 1, "offset": offset, "api_key": Router.apiKey])
                     case let .count(query):
-                        return ("search", ["q": query, "limit": 0, "api_key": apiKey])
+                        return ("search", ["q": query, "limit": 0, "api_key": Router.apiKey])
+                    case .random:
+                        return ("random", ["api_key": Router.apiKey])
+                    case .trending:
+                        return ("trending", ["api_key": Router.apiKey])
                 }
             }()
             

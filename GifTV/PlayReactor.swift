@@ -34,7 +34,8 @@ class PlayReactor: BaseReactor {
                 return self.getGifTrack(byQuery: self.query)
                     .startWith(.showLoading)
                     .takeUntil(self.actionSubject.filter { $0 == Action.onViewWillDisappear })
-            case .onGifLoaded:
+        case let .onGifLoaded(gifTrack):
+                self.addToHistory(gifTrack)
                 return self.getGifTrack(byQuery: self.query)
                     .flatMap { gifTrack in Observable<Int>
                         .interval(5, scheduler: MainScheduler.instance)
@@ -67,6 +68,18 @@ class PlayReactor: BaseReactor {
             .get(byQuery: query)
             .map { gifTrack in Mutation.showGifTrack(gifTrack) }
     }
+    
+    private func addToHistory(_ gifTrack: GifTrackSaved) {
+        let url = gifTrack.gif.gif.images.fixedWidthThumbnail.url
+        let name = gifTrack.gif.gif.id
+        self.provider.downloadService
+            .download(fromUrl: url, to: .documentDirectory, withName: name)
+            .flatMap { _ in
+                self.provider.historyService.add(fromGifTrack: gifTrack)
+            }
+            .debug("HOVNO")
+            .subscribe()
+    }
 }
 
 extension PlayReactor {
@@ -75,7 +88,7 @@ extension PlayReactor {
         case onViewWillAppear
         case onViewWillDisappear
         case onGifClicked
-        case onGifLoaded
+        case onGifLoaded(GifTrackSaved)
     }
     
     enum Mutation {
@@ -97,7 +110,7 @@ func ==(lhs: PlayReactor.Action, rhs: PlayReactor.Action) -> Bool {
             return true
         case (.onGifClicked, .onGifClicked):
             return true
-        case (.onGifLoaded, .onGifLoaded):
+        case (.onGifLoaded(_), .onGifLoaded(_)):
             return true
         default:
             return false

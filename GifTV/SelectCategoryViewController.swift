@@ -90,9 +90,13 @@ class SelectCategoryViewController : BaseViewController, View {
     }
     
     func navigateToCategory(_ category: Category) {
-        let viewController = PlayViewController(withQuery: category.searchValue)
-        self.present(viewController, animated: true, completion: nil)
-        print(category.searchValue)
+        if category.searchValue == "popular" {
+            let viewController = PlayViewController(withQuery: category.searchValue)
+            self.present(viewController, animated: true, completion: nil)
+        } else {
+            let viewController = HistoryViewController()
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
 

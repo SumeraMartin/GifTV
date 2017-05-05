@@ -76,10 +76,6 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         self.reactor = PlayReactor(provider: serviceProvider, forQuery: self.query)
     }
     
-    func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     func bind(reactor: PlayReactor) {
         reactor.state
             .map { $0.isLoading }
@@ -95,7 +91,7 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         
         reactor.state
             .filter { !$0.isLoading && $0.gifTrack != nil }
-            .map { _ in .onGifLoaded }
+            .map { PlayReactor.Action.onGifLoaded($0.gifTrack!) }
             .bind(to: reactor.action)
             .addDisposableTo(self.disposeBag)
         
@@ -113,12 +109,10 @@ class PlayViewController : BaseViewController, ReactorKit.View {
             .addDisposableTo(self.disposeBag)
         
         self.rx.viewWillDisappear
-            .subscribe(onNext: { _ in 
-                self.imageChanger!.stop()
-                self.gifImage.stopAnimatingGIF()
-                if self.player.isPlaying {
-                    self.player.stop()
-                }
+            .subscribe(onNext: { [weak self] _ in
+                self?.imageChanger!.stop()
+                self?.gifImage.stopAnimatingGIF()
+                self?.player.stop()
             }).addDisposableTo(self.disposeBag)
         
         self.rx.viewWillAppear
@@ -138,6 +132,10 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         } else {
             self.gifImage.contentMode = UIViewContentMode.scaleAspectFill
         }
+    }
+    
+    func back() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func showLoading(withAnimation animation: Bool) {
