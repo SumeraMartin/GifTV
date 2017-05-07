@@ -58,13 +58,13 @@
                     <rect key="frame" x="0.0" y="553" width="375" height="114"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joj Babel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuu-kF-wWR">
-                            <rect key="frame" x="66" y="24" width="221" height="30"/>
+                            <rect key="frame" x="74" y="24" width="213" height="30"/>
                             <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="30"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joj Babel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQG-Nf-4ka">
-                            <rect key="frame" x="66" y="62" width="221" height="25"/>
+                            <rect key="frame" x="74" y="62" width="213" height="25"/>
                             <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="SJf-SY-ZH0">
-                            <rect key="frame" x="287" y="8" width="80" height="98"/>
+                            <rect key="frame" x="287" y="24" width="80" height="66"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="xev-YZ-2Ux"/>
                             </constraints>
@@ -88,25 +88,25 @@
                     <color key="backgroundColor" red="0.96554511785507202" green="0.37700918316841125" blue="0.24104049801826477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="SJf-SY-ZH0" firstAttribute="leading" secondItem="yQG-Nf-4ka" secondAttribute="trailing" id="7Xk-yP-r2H"/>
-                        <constraint firstItem="yQG-Nf-4ka" firstAttribute="leading" secondItem="2Ue-9y-eIK" secondAttribute="trailing" constant="8" id="Gd9-jr-HJQ"/>
+                        <constraint firstItem="yQG-Nf-4ka" firstAttribute="leading" secondItem="2Ue-9y-eIK" secondAttribute="trailing" constant="16" id="9cq-pQ-FtE"/>
+                        <constraint firstItem="Iuu-kF-wWR" firstAttribute="leading" secondItem="2Ue-9y-eIK" secondAttribute="trailing" constant="16" id="CjF-lF-CRh"/>
+                        <constraint firstItem="SJf-SY-ZH0" firstAttribute="top" secondItem="k7j-lF-ghw" secondAttribute="top" constant="24" id="JbP-H5-uxz"/>
                         <constraint firstAttribute="bottom" secondItem="2Ue-9y-eIK" secondAttribute="bottom" constant="32" id="Nrc-z8-zau"/>
                         <constraint firstItem="Iuu-kF-wWR" firstAttribute="top" secondItem="k7j-lF-ghw" secondAttribute="top" constant="24" id="PUz-j0-eXV"/>
                         <constraint firstItem="2Ue-9y-eIK" firstAttribute="leading" secondItem="k7j-lF-ghw" secondAttribute="leading" constant="8" id="c9G-Rc-3Mc"/>
                         <constraint firstItem="SJf-SY-ZH0" firstAttribute="leading" secondItem="yQG-Nf-4ka" secondAttribute="trailing" id="dig-md-xvZ"/>
+                        <constraint firstAttribute="bottom" secondItem="SJf-SY-ZH0" secondAttribute="bottom" constant="24" id="pTn-Ir-8tV"/>
                         <constraint firstItem="yQG-Nf-4ka" firstAttribute="top" secondItem="Iuu-kF-wWR" secondAttribute="bottom" constant="8" id="s3c-j0-sTg"/>
-                        <constraint firstItem="Iuu-kF-wWR" firstAttribute="leading" secondItem="2Ue-9y-eIK" secondAttribute="trailing" constant="8" id="tFg-bD-ERK"/>
                         <constraint firstItem="2Ue-9y-eIK" firstAttribute="top" secondItem="k7j-lF-ghw" secondAttribute="top" constant="32" id="uk1-Bo-OMi"/>
                         <constraint firstItem="SJf-SY-ZH0" firstAttribute="leading" secondItem="Iuu-kF-wWR" secondAttribute="trailing" id="vQY-3l-EB3"/>
                         <constraint firstAttribute="trailing" secondItem="SJf-SY-ZH0" secondAttribute="trailing" constant="8" id="wVK-r5-R1L"/>
-                        <constraint firstItem="SJf-SY-ZH0" firstAttribute="top" secondItem="k7j-lF-ghw" secondAttribute="top" constant="8" id="wcE-Rs-SGl"/>
-                        <constraint firstAttribute="bottom" secondItem="SJf-SY-ZH0" secondAttribute="bottom" constant="8" id="y6C-fm-eSW"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="5"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

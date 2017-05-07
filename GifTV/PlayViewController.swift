@@ -103,6 +103,7 @@ class PlayViewController : BaseViewController, ReactorKit.View {
                     self.showLoading(withAnimation: true)
                     self.stopAudio()
                 } else {
+                    self.hideInfo()
                     self.hideLoading()
                 }
             })
