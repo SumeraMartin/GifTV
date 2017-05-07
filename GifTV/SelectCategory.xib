@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qjR-ww-QDa">
-                    <rect key="frame" x="16" y="204" width="343" height="463"/>
+                    <rect key="frame" x="16" y="196" width="343" height="471"/>
                     <color key="backgroundColor" red="0.95069760084152222" green="0.36950927972793579" blue="0.23423880338668823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aWU-rX-425">
                         <size key="itemSize" width="50" height="50"/>
@@ -40,13 +40,13 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GifTV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcT-tJ-P59">
-                    <rect key="frame" x="130" y="40" width="115" height="50"/>
+                    <rect key="frame" x="130" y="24" width="115" height="50"/>
                     <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="50"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r9q-Et-mVN">
-                    <rect key="frame" x="16" y="98" width="343" height="90"/>
+                    <rect key="frame" x="16" y="90" width="343" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-8x-Ln5">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
@@ -95,12 +95,12 @@
             </subviews>
             <color key="backgroundColor" red="0.96470588235294119" green="0.37647058823529411" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="r9q-Et-mVN" firstAttribute="top" secondItem="DcT-tJ-P59" secondAttribute="bottom" constant="16" id="20U-Ky-hcN"/>
                 <constraint firstItem="qjR-ww-QDa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3h8-Hc-QwN"/>
                 <constraint firstAttribute="bottom" secondItem="qjR-ww-QDa" secondAttribute="bottom" id="3sz-Qz-xRe"/>
                 <constraint firstAttribute="trailing" secondItem="qjR-ww-QDa" secondAttribute="trailing" constant="16" id="Tok-Dd-Rfv"/>
-                <constraint firstItem="DcT-tJ-P59" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="bEa-IE-Fv3"/>
+                <constraint firstItem="DcT-tJ-P59" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="eKp-1b-8u7"/>
                 <constraint firstAttribute="trailing" secondItem="r9q-Et-mVN" secondAttribute="trailing" constant="16" id="gTJ-Cz-lyh"/>
-                <constraint firstItem="r9q-Et-mVN" firstAttribute="top" secondItem="DcT-tJ-P59" secondAttribute="bottom" constant="8" id="kt7-YQ-laP"/>
                 <constraint firstItem="DcT-tJ-P59" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="130" id="u7I-vW-ToI"/>
                 <constraint firstAttribute="trailing" secondItem="DcT-tJ-P59" secondAttribute="trailing" constant="130" id="uKW-Qq-pYt"/>
                 <constraint firstItem="qjR-ww-QDa" firstAttribute="top" secondItem="r9q-Et-mVN" secondAttribute="bottom" constant="16" id="uoe-Pf-klf"/>
