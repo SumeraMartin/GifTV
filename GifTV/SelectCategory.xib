@@ -17,8 +17,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectCategoryViewController" customModule="GifTV" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="qjR-ww-QDa" id="LxQ-mP-Kvu"/>
-                <outlet property="randomButton" destination="ajq-xl-BXi" id="s7d-9N-p0Z"/>
-                <outlet property="trendingButton" destination="kxf-cd-T0W" id="IU9-Ry-2wP"/>
+                <outlet property="historyButton" destination="ajq-xl-BXi" id="Bgi-qu-tPm"/>
+                <outlet property="randomButton" destination="0IC-YE-H2d" id="Eze-7U-chi"/>
+                <outlet property="savedButton" destination="kxf-cd-T0W" id="Pxb-ue-Pfz"/>
+                <outlet property="trendingButton" destination="VbA-4W-YcY" id="gtr-Qa-FJY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9sj-gO-tJZ"/>
             </connections>
         </placeholder>
@@ -28,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qjR-ww-QDa">
-                    <rect key="frame" x="16" y="156" width="343" height="511"/>
+                    <rect key="frame" x="16" y="204" width="343" height="463"/>
                     <color key="backgroundColor" red="0.95069760084152222" green="0.36950927972793579" blue="0.23423880338668823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aWU-rX-425">
                         <size key="itemSize" width="50" height="50"/>
@@ -43,45 +45,66 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-8x-Ln5">
-                    <rect key="frame" x="16" y="98" width="343" height="50"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r9q-Et-mVN">
+                    <rect key="frame" x="16" y="98" width="343" height="90"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-cd-T0W" userLabel="Trending">
-                            <rect key="frame" x="0.0" y="6.5" width="166.5" height="37"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
-                            <state key="normal" title="Trending">
-                                <color key="titleColor" red="0.9665265679359436" green="0.37735447287559509" blue="0.23745110630989075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajq-xl-BXi">
-                            <rect key="frame" x="176.5" y="6.5" width="166.5" height="37"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
-                            <state key="normal" title="Random">
-                                <color key="titleColor" red="0.96652656790000002" green="0.37735447290000002" blue="0.23745110629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-8x-Ln5">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-cd-T0W" userLabel="Trending">
+                                    <rect key="frame" x="0.0" y="0.0" width="166.5" height="37"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
+                                    <state key="normal" title="Saved">
+                                        <color key="titleColor" red="0.9665265679359436" green="0.37735447287559509" blue="0.23745110630989075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajq-xl-BXi">
+                                    <rect key="frame" x="176.5" y="0.0" width="166.5" height="37"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
+                                    <state key="normal" title="History">
+                                        <color key="titleColor" red="0.96652656790000002" green="0.37735447290000002" blue="0.23745110629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-NK-8ec">
+                            <rect key="frame" x="0.0" y="53" width="343" height="37"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-4W-YcY" userLabel="Trending">
+                                    <rect key="frame" x="0.0" y="0.0" width="166.5" height="37"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
+                                    <state key="normal" title="Trending">
+                                        <color key="titleColor" red="0.96652656790000002" green="0.37735447290000002" blue="0.23745110629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IC-YE-H2d">
+                                    <rect key="frame" x="176.5" y="0.0" width="166.5" height="37"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="VT323-Regular" family="VT323" pointSize="25"/>
+                                    <state key="normal" title="Random">
+                                        <color key="titleColor" red="0.96652656790000002" green="0.37735447290000002" blue="0.23745110629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Z91-WH-UX2"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.96470588235294119" green="0.37647058823529411" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="qjR-ww-QDa" secondAttribute="bottom" id="1K6-hd-b9L"/>
                 <constraint firstItem="qjR-ww-QDa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3h8-Hc-QwN"/>
-                <constraint firstItem="qjR-ww-QDa" firstAttribute="top" secondItem="ShW-8x-Ln5" secondAttribute="bottom" constant="8" id="6Zt-MK-dgu"/>
-                <constraint firstAttribute="trailing" secondItem="ShW-8x-Ln5" secondAttribute="trailing" constant="16" id="9hA-ki-gO8"/>
-                <constraint firstItem="qjR-ww-QDa" firstAttribute="top" secondItem="ShW-8x-Ln5" secondAttribute="bottom" constant="8" id="AFo-d5-cEw"/>
-                <constraint firstItem="ShW-8x-Ln5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="KGA-bz-1v9"/>
-                <constraint firstItem="qjR-ww-QDa" firstAttribute="top" secondItem="ShW-8x-Ln5" secondAttribute="bottom" constant="8" id="Lkd-tB-11v"/>
+                <constraint firstAttribute="bottom" secondItem="qjR-ww-QDa" secondAttribute="bottom" id="3sz-Qz-xRe"/>
                 <constraint firstAttribute="trailing" secondItem="qjR-ww-QDa" secondAttribute="trailing" constant="16" id="Tok-Dd-Rfv"/>
                 <constraint firstItem="DcT-tJ-P59" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="bEa-IE-Fv3"/>
+                <constraint firstAttribute="trailing" secondItem="r9q-Et-mVN" secondAttribute="trailing" constant="16" id="gTJ-Cz-lyh"/>
+                <constraint firstItem="r9q-Et-mVN" firstAttribute="top" secondItem="DcT-tJ-P59" secondAttribute="bottom" constant="8" id="kt7-YQ-laP"/>
                 <constraint firstItem="DcT-tJ-P59" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="130" id="u7I-vW-ToI"/>
                 <constraint firstAttribute="trailing" secondItem="DcT-tJ-P59" secondAttribute="trailing" constant="130" id="uKW-Qq-pYt"/>
-                <constraint firstItem="ShW-8x-Ln5" firstAttribute="top" secondItem="DcT-tJ-P59" secondAttribute="bottom" constant="8" id="uqW-ok-egN"/>
+                <constraint firstItem="qjR-ww-QDa" firstAttribute="top" secondItem="r9q-Et-mVN" secondAttribute="bottom" constant="16" id="uoe-Pf-klf"/>
+                <constraint firstItem="r9q-Et-mVN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="yql-5K-Z8H"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="67.5"/>
         </view>

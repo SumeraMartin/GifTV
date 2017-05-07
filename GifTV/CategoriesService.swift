@@ -17,14 +17,14 @@ final class CategoriesService: BaseService, CategoriesServiceType {
     
     func fetchCategories() -> Observable<[Category]> {
         let categories = [
-            Category("Popular"),
+            Category("Party"),
             Category("Cats"),
             Category("Dogs"),
-            Category("Wasted"),
-            Category("Popular"),
-            Category("Cats"),
-            Category("Dogs"),
-            Category("Wasted"),
+            Category("Fail"),
+            Category("Funny"),
+            Category("Kids"),
+            Category("Sport"),
+            Category("Animals"),
             Category("Popular"),
             Category("Cats"),
             Category("Dogs"),

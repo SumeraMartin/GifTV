@@ -18,11 +18,9 @@ protocol SpotifyServiceType {
 class SpotifyService : BaseService, SpotifyServiceType {
     
     func downloadTrack(byQuery query: String) -> Observable<TrackSaved> {
-        
-        URLCache.shared.removeAllCachedResponses()
-        
         return self.getTrackCount(byQuery: query)
-            .flatMap { count in self.getTrack(byQuery: query, withOffset: (0...min(100000,count)).random) }
+  //          .flatMap { count in self.getTrack(byQuery: query, withOffset: (0...min(100000,count)).random) }
+            .flatMap { count in self.getTrack(byQuery: query, withOffset: (0...min(10,count)).random) }
             .flatMap { track in self.downloadTrack(track) }
     }
     

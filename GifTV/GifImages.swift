@@ -15,7 +15,7 @@ struct GifImages: Decodable {
     let fixedWidthThumbnail: GifUrlImage
         
     public init?(json: JSON) {
-        guard let original: GifUrlImage = "original" <~~ json else {
+        guard let original: GifUrlImage = "fixed_height" <~~ json else {
             return nil
         }
         guard let fixedWidthThumbnail: GifUrlImage = "fixed_width_downsampled" <~~ json else {

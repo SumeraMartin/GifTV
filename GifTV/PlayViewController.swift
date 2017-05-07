@@ -27,6 +27,18 @@ class PlayViewController : BaseViewController, ReactorKit.View {
     
     @IBOutlet weak var loadingImage: UIImageView!
     
+    @IBOutlet weak var infoViewBottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var infoView: UIView!
+    
+    @IBOutlet weak var infoTitle: UILabel!
+    
+    @IBOutlet weak var infoSubtitle: UILabel!
+    
+    @IBOutlet weak var favoriteImage: UIImageView!
+    
+    @IBOutlet weak var nextImage: UIImageView!
+    
     @IBOutlet weak var gifImage: GIFImageView!
     
     @IBOutlet weak var gifView: UIView!
@@ -35,11 +47,15 @@ class PlayViewController : BaseViewController, ReactorKit.View {
 
     @IBOutlet weak var navItem: UINavigationItem!
     
+    let infoViewHiddenOffset: CGFloat = 200
+    
+    var isInfoVisible: Bool = false
+    
     var query: String
     
     var imageChanger: UIImageChanger?
     
-    var player = AVAudioPlayer()
+    var player: AVAudioPlayer?
     
     init(withQuery query: String) {
         self.query = query
@@ -73,6 +89,8 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         
         self.showLoading(withAnimation: false)
         
+        infoViewBottomConstraint.constant = -infoViewHiddenOffset
+        
         self.reactor = PlayReactor(provider: serviceProvider, forQuery: self.query)
     }
     
@@ -83,6 +101,7 @@ class PlayViewController : BaseViewController, ReactorKit.View {
             .subscribe(onNext: { isLoading in
                 if isLoading {
                     self.showLoading(withAnimation: true)
+                    self.stopAudio()
                 } else {
                     self.hideLoading()
                 }
@@ -91,20 +110,70 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         
         reactor.state
             .filter { !$0.isLoading && $0.gifTrack != nil }
-            .map { PlayReactor.Action.onGifLoaded($0.gifTrack!) }
+            .distinctUntilChanged { $0.gifTrack?.gif.path == $1.gifTrack?.gif.path  }
+            .map { .onGifLoaded($0.gifTrack!) }
             .bind(to: reactor.action)
             .addDisposableTo(self.disposeBag)
         
         reactor.state
             .filter { !$0.isLoading && $0.gifTrack != nil }
+            .distinctUntilChanged { $0.gifTrack?.gif.path == $1.gifTrack?.gif.path }
             .subscribe(onNext: { state in
+                self.infoTitle.text = state.gifTrack!.authorName
+                self.infoSubtitle.text = state.gifTrack!.songName
+                self.favoriteImage.image = UIImage(named:"not_favorite")
                 self.playGif(fromPath: state.gifTrack!.gif.path)
                 self.playAudio(fromPath: state.gifTrack!.track.path)
             }).addDisposableTo(self.disposeBag)
         
+        reactor.state
+            .map { $0.isFavorite }
+            .filter { $0 == true }
+            .subscribe(onNext: { [weak self] state in
+                self?.favoriteImage.image = UIImage(named:"favorite")
+            }).addDisposableTo(self.disposeBag)
+        
+        reactor.state
+            .map { $0.isFavorite }
+            .filter { $0 == false }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] state in
+                self?.favoriteImage.image = UIImage(named:"not_favorite")
+            }).addDisposableTo(self.disposeBag)
+        
         self.gifView.rx.tapGesture()
+            .when(.ended)   
+            .do(onNext: { _ in
+                if self.isInfoVisible {
+                    self.isInfoVisible = false
+                    self.hideInfo()
+                } else {
+                    self.isInfoVisible = true
+                    self.showInfo()
+                }
+            }).flatMapLatest { _ in
+                return Observable<Int>.interval(5, scheduler: MainScheduler.instance).take(1)
+            }.subscribe(onNext: { [weak self] _ in
+                self?.isInfoVisible = false
+                self?.hideInfo()
+            })
+            .addDisposableTo(self.disposeBag)
+        
+        self.nextImage.rx.tapGesture()
             .when(.ended)
             .map { _ in .onGifClicked }
+            .bind(to: reactor.action)
+            .addDisposableTo(self.disposeBag)
+        
+        self.favoriteImage.rx.tapGesture()
+            .when(.ended)
+            .filter { _ in !reactor.currentState.isFavorite }
+            .map { _ in .onGifMarkedAsFavorite(reactor.currentState.gifTrack!) }
+            .bind(to: reactor.action)
+            .addDisposableTo(self.disposeBag)
+        
+        self.rx.viewWillAppear
+            .map { _ in .onViewWillAppear }
             .bind(to: reactor.action)
             .addDisposableTo(self.disposeBag)
         
@@ -112,13 +181,8 @@ class PlayViewController : BaseViewController, ReactorKit.View {
             .subscribe(onNext: { [weak self] _ in
                 self?.imageChanger!.stop()
                 self?.gifImage.stopAnimatingGIF()
-                self?.player.stop()
+                self?.stopAudio()
             }).addDisposableTo(self.disposeBag)
-        
-        self.rx.viewWillAppear
-            .map { _ in .onViewWillAppear }
-            .bind(to: reactor.action)
-            .addDisposableTo(self.disposeBag)
         
         self.rx.viewWillDisappear
             .map { _ in .onViewWillDisappear }
@@ -166,6 +230,24 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         })
     }
     
+    private func showInfo() {
+        self.view.layoutIfNeeded()
+        self.infoViewBottomConstraint.constant = 0
+        UIView.animate(withDuration: 0.4, animations: {
+            self.infoViewBottomConstraint.constant += 0
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    private func hideInfo() {
+        self.view.layoutIfNeeded()
+        self.infoViewBottomConstraint.constant = 0
+        UIView.animate(withDuration: 0.4, animations: {
+            self.infoViewBottomConstraint.constant -= self.infoViewHiddenOffset
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     private func playGif(fromPath gifLocalPath: String) {
         guard FileManager.default.fileExists(atPath: gifLocalPath) else {
             print("Local gif file do not exists")
@@ -190,11 +272,19 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         do {
             let url = URL(string: "file://" + audioLocalPath)!
             self.player = try AVAudioPlayer(contentsOf: url)
-            self.player.prepareToPlay()
-            self.player.volume = 1.0
-            self.player.play()
+            self.player?.prepareToPlay()
+            self.player?.volume = 1.0
+            self.player?.play()
         } catch let error as NSError {
             print(error)
+        }
+    }
+    
+    private func stopAudio() {
+        if let audioPlayer = self.player {
+            if audioPlayer.isPlaying {
+                audioPlayer.stop()
+            }
         }
     }
 }

@@ -18,8 +18,15 @@ protocol GiphyServiceType {
 class GiphyService: BaseService, GiphyServiceType  {
     
     func downloadGif(byQuery query: String) -> Observable<GifSaved> {
+        if query == "trending" { 
+            return self.getGif(withRouter: Router.trending)
+                        .flatMap { self.downloadGifThumbnail($0) }
+                        .map { $0.gif }
+                        .flatMap { self.downloadGif($0) }
+        }
+    
         return self.getGifCount(byQuery: query)
-            .flatMap { self.getGif(byQuery: query, withOffset: (0...min(1000, $0)).random) }
+            .flatMap { self.getGif(withRouter: Router.search(query: query, offset: (0...min(1000, $0)).random)) }
             .flatMap { self.downloadGifThumbnail($0) }
             .map { $0.gif }
             .flatMap { self.downloadGif($0) }
@@ -83,7 +90,7 @@ class GiphyService: BaseService, GiphyServiceType  {
                 .responseObject(GifData.self) { response in
                     switch response.result {
                         case .success(let gif):
-                            observer.onNext(gif.pagination.count)
+                            observer.onNext(gif.pagination.count!)
                             observer.onCompleted()
                         case .failure(let error):
                             observer.onError(error)
@@ -103,16 +110,37 @@ class GiphyService: BaseService, GiphyServiceType  {
                 .log()
                 .responseObject(GifData.self) { response in
                     switch response.result {
-                        case .success(let gif):
-                            observer.onNext(gif.gif[0])
-                            observer.onCompleted()
-                        case .failure(let error):
-                            observer.onError(error)
+                    case .success(let gif):
+                        observer.onNext(gif.gif[0])
+                        observer.onCompleted()
+                    case .failure(let error):
+                        observer.onError(error)
                     }
-                }
-        
+            }
+            
             return Disposables.create(with: {
-               request.cancel()
+                request.cancel()
+            })
+        }
+    }
+    
+    private func getGif(withRouter router: URLRequestConvertible) -> Observable<Gif> {
+        return Observable.create { observer in
+            let request = Alamofire
+                .request(router)
+                .log()
+                .responseObject(GifData.self) { response in
+                    switch response.result {
+                    case .success(let gif):
+                        observer.onNext(gif.gif[0])
+                        observer.onCompleted()
+                    case .failure(let error):
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create(with: {
+                request.cancel()
             })
         }
     }
@@ -123,7 +151,6 @@ extension GiphyService {
     enum Router: URLRequestConvertible {
         case search(query: String, offset: Int)
         case count(query: String)
-        case random
         case trending
         
         static let baseURLString = "http://api.giphy.com/v1/gifs/"
@@ -140,10 +167,8 @@ extension GiphyService {
                         return ("search", ["q": query, "limit": 1, "offset": offset, "api_key": Router.apiKey])
                     case let .count(query):
                         return ("search", ["q": query, "limit": 0, "api_key": Router.apiKey])
-                    case .random:
-                        return ("random", ["api_key": Router.apiKey])
                     case .trending:
-                        return ("trending", ["api_key": Router.apiKey])
+                        return ("trending", ["limit": 1, "offset": (1...1000).random, "api_key": Router.apiKey])
                 }
             }()
             
@@ -151,5 +176,18 @@ extension GiphyService {
             let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
             return try URLEncoding.default.encode(urlRequest, with: result.parameters)
         }
+    }
+}
+    
+func ==(lhs: GiphyService.Router, rhs: GiphyService.Router) -> Bool {
+    switch (lhs, rhs) {
+        case (.trending, .trending):
+            return true
+        case let (.count(first), .count(second)):
+            return first == second
+        case let (.search(lhsFirst, lhsSecond), .search(rhsFirst, rhsSecond)):
+            return lhsFirst == rhsFirst && lhsSecond == rhsSecond
+        default:
+            return false
     }
 }

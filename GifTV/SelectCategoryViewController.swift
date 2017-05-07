@@ -16,6 +16,10 @@ typealias CategorySectionModel = SectionModel<Void, Category>
 
 class SelectCategoryViewController : BaseViewController, View {
     
+    @IBOutlet weak var savedButton: UIButton!
+    
+    @IBOutlet weak var historyButton: UIButton!
+    
     @IBOutlet weak var trendingButton: UIButton!
     
     @IBOutlet weak var randomButton: UIButton!
@@ -57,6 +61,18 @@ class SelectCategoryViewController : BaseViewController, View {
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .addDisposableTo(self.disposeBag)
         
+        savedButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.navigateToSaved()
+            })
+            .addDisposableTo(self.disposeBag)
+        
+        historyButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.navigateToHistory()
+            })
+            .addDisposableTo(self.disposeBag)
+        
         trendingButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.navigateToCategory(Category.trending())
@@ -90,13 +106,18 @@ class SelectCategoryViewController : BaseViewController, View {
     }
     
     func navigateToCategory(_ category: Category) {
-        if category.searchValue == "popular" {
-            let viewController = PlayViewController(withQuery: category.searchValue)
-            self.present(viewController, animated: true, completion: nil)
-        } else {
-            let viewController = HistoryViewController()
-            self.present(viewController, animated: true, completion: nil)
-        }
+        let viewController = PlayViewController(withQuery: category.searchValue)
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func navigateToSaved() {
+        let viewController = PopularViewController()
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func navigateToHistory() {
+        let viewController = HistoryViewController()
+        self.present(viewController, animated: true, completion: nil)
     }
 }
 

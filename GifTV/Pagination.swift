@@ -10,13 +10,10 @@ import Gloss
 
 struct Pagination: Decodable {
     
-    let count: Int
+    let count: Int?
     
     public init?(json: JSON) {
-        guard let count: Int = "total_count" <~~ json else {
-            return nil
-        }
-        self.count = count
+        self.count = "total_count" <~~ json
     }
     
 }

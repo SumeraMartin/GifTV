@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/SelectCategoryViewController.swift"
-            timestampString = "514824938.604311"
+            timestampString = "515755994.074769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -263,22 +263,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "bind(reactor:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GifTV/UIImageView.swift"
             timestampString = "514993168.916577"
             startingColumnNumber = "9223372036854775807"
@@ -312,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GiphyService.swift"
-            timestampString = "514977356.693995"
+            timestampString = "515678745.792077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "GiphyServiceType"
             landmarkType = "5">
          </BreakpointContent>
@@ -327,28 +311,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GifTV/GiphyService.swift"
-            timestampString = "515410304.073777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "getGif(byQuery:withOffset:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515773763.28019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -472,11 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515773763.28019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
             <Locations>
@@ -520,12 +488,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515322350.449071"
+            timestampString = "515773916.884107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "showLoading(withAnimation:)"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "hideLoading()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -536,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515773763.28019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
             <Locations>
@@ -583,76 +551,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "bind(reactor:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GifTV.PlayViewController.bind (reactor : GifTV.PlayReactor) -&gt; ()"
-                  moduleName = "GifTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
-                  timestampString = "515014058.472143"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "2679">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #5)"
-                  moduleName = "GifTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
-                  timestampString = "515014058.475289"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "17">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "bind(reactor:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515361831.273788"
+            timestampString = "515771300.966165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "mutate(action:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -664,28 +568,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515320872.654661"
+            timestampString = "515766776.094903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "mutate(action:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "bind(reactor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -712,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515765520.541686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -728,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515765520.541686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
             <Locations>
@@ -792,11 +680,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GiphyService.swift"
-            timestampString = "515410304.073777"
+            timestampString = "515759878.627057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "getGifCount(byQuery:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -808,11 +696,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/Pagination.swift"
-            timestampString = "515175310.798169"
+            timestampString = "515757841.115146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "init(json:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -824,11 +712,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GiphyService.swift"
-            timestampString = "515410304.073777"
+            timestampString = "515759878.627057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "getGifCount(byQuery:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -840,11 +728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GiphyService.swift"
-            timestampString = "515410304.073777"
+            timestampString = "515759878.627057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "method"
             landmarkType = "24">
          </BreakpointContent>
@@ -856,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GiphyService.swift"
-            timestampString = "515410304.073777"
+            timestampString = "515759878.627057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "downloadGif(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -872,11 +760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayViewController.swift"
-            timestampString = "515428719.592769"
+            timestampString = "515773763.28019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
             <Locations>
@@ -920,11 +808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515361831.273788"
+            timestampString = "515771300.966165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "reduce(state:mutation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1016,11 +904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GifTrackService.swift"
-            timestampString = "515263347.558883"
+            timestampString = "515770724.439256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "createTags(from:or:separator:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1048,11 +936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/GifTrackService.swift"
-            timestampString = "515263347.558883"
+            timestampString = "515770724.439256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "createTags(from:or:separator:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1063,76 +951,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515361831.273788"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "mutate(action:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515361831.273788"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "mutate(action:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GifTV.PlayReactor.(mutate (action : GifTV.PlayReactor.Action) -&gt; RxSwift.Observable&lt;GifTV.PlayReactor.Mutation&gt;).(closure #1)"
-                  moduleName = "GifTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayReactor.swift"
-                  timestampString = "515263011.984788"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1467">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GifTV.PlayReactor.(mutate (action : GifTV.PlayReactor.Action) -&gt; RxSwift.Observable&lt;GifTV.PlayReactor.Mutation&gt;).(closure #1).(closure #2)"
-                  moduleName = "GifTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayReactor.swift"
-                  timestampString = "515263011.987522"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "381">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GifTV/GifTrackService.swift"
-            timestampString = "515263347.558883"
+            timestampString = "515770724.439256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "createTags(from:or:separator:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1144,11 +968,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/HistoryViewController.swift"
-            timestampString = "515428607.329228"
+            timestampString = "515771391.593146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1160,11 +984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/HistoryViewController.swift"
-            timestampString = "515428607.329228"
+            timestampString = "515771391.593146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "bind(reactor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1176,11 +1000,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515410490.102211"
+            timestampString = "515771300.966165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addToHistory(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1192,11 +1016,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/PlayReactor.swift"
-            timestampString = "515410511.351177"
+            timestampString = "515771300.966165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "addToHistory(_:)"
             landmarkType = "7">
             <Locations>
@@ -1229,6 +1053,869 @@
                   startingLineNumber = "78"
                   endingLineNumber = "78"
                   offsetFromSymbolStart = "548">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PopularService.swift"
+            timestampString = "515679184.055035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getAll()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/SelectCategoryViewController.swift"
+            timestampString = "515757036.910702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/SelectCategoryViewController.swift"
+            timestampString = "515757038.801575"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/SelectCategoryViewController.swift"
+            timestampString = "515757058.617454"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GifUrlImage.swift"
+            timestampString = "515757708.076529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773916.884107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "playGif(fromPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773916.884107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "playGif(fromPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayReactor.swift"
+            timestampString = "515771300.966165"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "reduce(state:mutation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayReactor.swift"
+            timestampString = "515771300.966165"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "mutate(action:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayReactor.mutate (action : GifTV.PlayReactor.Action) -&gt; RxSwift.Observable&lt;GifTV.PlayReactor.Mutation&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayReactor.swift"
+                  timestampString = "515767049.180801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "5529">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayReactor.(mutate (action : GifTV.PlayReactor.Action) -&gt; RxSwift.Observable&lt;GifTV.PlayReactor.Mutation&gt;).(closure #4)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayReactor.swift"
+                  timestampString = "515767049.183287"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "7">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.bind (reactor : GifTV.PlayReactor) -&gt; ()"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515767860.374821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "1449">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #5)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515767860.37728"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "414">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.bind (reactor : GifTV.PlayReactor) -&gt; ()"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515767452.628066"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1323">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #4)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515767452.630561"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "441">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515767957.130156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515768190.863436"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515768192.423704"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.443757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1070">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.(downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;).(closure #4)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.447332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515768193.308422"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.453833"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1300">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.(downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;).(closure #5)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.45629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515768193.987714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.46199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1686">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.(downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;).(closure #7)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768331.464158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GiphyService.swift"
+            timestampString = "515768194.903727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "downloadGif(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768195.124925"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1496">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GiphyService.(downloadGif (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifSaved&gt;).(closure #6)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GiphyService.swift"
+                  timestampString = "515768195.128321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "203">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/SpotifyService.swift"
+            timestampString = "515768566.915206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "downloadTrack(byQuery:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/SpotifyService.swift"
+            timestampString = "515774658.072835"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "downloadTrack(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.SpotifyService.downloadTrack (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.TrackSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/SpotifyService.swift"
+                  timestampString = "515768709.577514"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "390">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.SpotifyService.(downloadTrack (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.TrackSaved&gt;).(closure #2)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/SpotifyService.swift"
+                  timestampString = "515768709.580547"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GifTrackService.swift"
+            timestampString = "515770724.439256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "get(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GifTrackService.(get (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifTrackSaved&gt;).(closure #1)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GifTrackService.swift"
+                  timestampString = "515768709.586502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1214">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GifTrackService.(get (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifTrackSaved&gt;).(closure #1).(closure #1)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GifTrackService.swift"
+                  timestampString = "515768709.589675"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "327">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GifTrackService.swift"
+            timestampString = "515768583.573461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "get(byQuery:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GifTrackService.swift"
+            timestampString = "515768585.046089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "get(byQuery:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/GifTrackService.swift"
+            timestampString = "515768585.811047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "get(byQuery:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GifTrackService.get (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifTrackSaved&gt;"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GifTrackService.swift"
+                  timestampString = "515768709.602489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.GifTrackService.(get (byQuery : Swift.String) -&gt; RxSwift.Observable&lt;GifTV.GifTrackSaved&gt;).(closure #1)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/GifTrackService.swift"
+                  timestampString = "515768709.605504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "263">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/TrackArtist.swift"
+            timestampString = "515768903.707672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.bind (reactor : GifTV.PlayReactor) -&gt; ()"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515772112.818457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "8021">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #18)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515772112.822372"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773916.884107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "hideInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GifTV/PlayViewController.swift"
+            timestampString = "515773763.28019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "bind(reactor:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.bind (reactor : GifTV.PlayReactor) -&gt; ()"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515772696.853166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "6737">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #16)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515772696.856242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "133">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GifTV.PlayViewController.(bind (reactor : GifTV.PlayReactor) -&gt; ()).(closure #17)"
+                  moduleName = "GifTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martin/Projects/ios/GifTV/GifTV/PlayViewController.swift"
+                  timestampString = "515772696.858521"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "17">
                </Location>
             </Locations>
          </BreakpointContent>

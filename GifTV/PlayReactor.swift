@@ -23,6 +23,7 @@ class PlayReactor: BaseReactor {
         
         self.initialState = State(
             isLoading: false,
+            isFavorite: false,
             gifTrack: nil
         )
     }
@@ -36,17 +37,24 @@ class PlayReactor: BaseReactor {
                     .takeUntil(self.actionSubject.filter { $0 == Action.onViewWillDisappear })
         case let .onGifLoaded(gifTrack):
                 self.addToHistory(gifTrack)
-                return self.getGifTrack(byQuery: self.query)
-                    .flatMap { gifTrack in Observable<Int>
-                        .interval(5, scheduler: MainScheduler.instance)
-                        .take(1)
-                        .map { tick in gifTrack }
-                    }
+                
+                let getGif = self.getGifTrack(byQuery: self.query)
+                let waitSeveralSeconds = Observable<Int>
+                    .interval(8, scheduler: MainScheduler.instance)
+                    .take(1)
+                
+                return Observable.zip(getGif, waitSeveralSeconds)
+                    .map { (gif, __) in gif }
                     .takeUntil(self.actionSubject.filter { $0 == Action.onViewWillDisappear })
             case .onGifClicked:
                 return Observable.just(.showLoading)
             case .onViewWillDisappear:
                 return Observable.empty()
+            case let .onGifMarkedAsFavorite(gifTrack):
+                return self.provider.popularService
+                    .add(gifTrack)
+                    .map { .markAsFavorite }
+            
         }
     }
     
@@ -57,8 +65,12 @@ class PlayReactor: BaseReactor {
                 state.isLoading = true
                 return state
             case let .showGifTrack(gifTrack):
+                state.isFavorite = false
                 state.isLoading = false
                 state.gifTrack = gifTrack
+                return state
+            case .markAsFavorite:
+                state.isFavorite = true
                 return state
         }
     }
@@ -77,7 +89,6 @@ class PlayReactor: BaseReactor {
             .flatMap { _ in
                 self.provider.historyService.add(fromGifTrack: gifTrack)
             }
-            .debug("HOVNO")
             .subscribe()
     }
 }
@@ -89,15 +100,18 @@ extension PlayReactor {
         case onViewWillDisappear
         case onGifClicked
         case onGifLoaded(GifTrackSaved)
+        case onGifMarkedAsFavorite(GifTrackSaved)
     }
     
     enum Mutation {
         case showLoading
         case showGifTrack(GifTrackSaved)
+        case markAsFavorite
     }
     
     struct State {
         var isLoading: Bool
+        var isFavorite: Bool
         var gifTrack: GifTrackSaved?
     }
 }

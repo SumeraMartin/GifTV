@@ -38,6 +38,7 @@ class HistoryViewController : BaseViewController, View {
         let nib = UINib(nibName: HistoryGifTrackCell.identifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: HistoryGifTrackCell.identifier)
         self.tableView.delegate = self
+        self.tableView.separatorStyle = .none
         
         let backButton: UIBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(back))
         self.navItem.leftBarButtonItem = backButton

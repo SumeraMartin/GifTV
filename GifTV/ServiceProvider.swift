@@ -18,6 +18,8 @@ protocol ServiceProviderType: class {
     
     var historyService: HistoryService { get }
     
+    var popularService: PopularService { get }
+    
     var downloadService: DownloadService { get }
 }
 
@@ -32,6 +34,8 @@ final class ServiceProvider: ServiceProviderType {
     lazy var gifTrackService: GifTrackService = GifTrackService(provider: self)
     
     lazy var historyService: HistoryService = HistoryService(provider: self)
+    
+    lazy var popularService: PopularService = PopularService(provider: self)
     
     lazy var downloadService: DownloadService = DownloadService(provider: self)
 }

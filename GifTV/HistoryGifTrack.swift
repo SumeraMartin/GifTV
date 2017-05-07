@@ -8,15 +8,6 @@
 
 import RealmSwift
 
-class HistoryGifTrack : Object {
+class HistoryGifTrack : GifTrackPersistItem {
     
-    dynamic var trackName = ""
-    
-    dynamic var trackArtistName = ""
-    
-    dynamic var trackUrl = ""
-    
-    dynamic var gifOriginalUrl = ""
-    
-    dynamic var gifLocalPath = ""
 }

@@ -32,6 +32,15 @@
 		5B278A281EB207C30091EADD /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B278A271EB207C30091EADD /* Alamofire.swift */; };
 		5B278A2A1EB20A630091EADD /* GifData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B278A291EB20A630091EADD /* GifData.swift */; };
 		5B696F1F1EAD1A1B00F8D4D1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B696F1E1EAD1A1B00F8D4D1 /* UIView.swift */; };
+		5B6C8DAA1EBDC81A0044AEDF /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C8DA91EBDC81A0044AEDF /* PopularViewController.swift */; };
+		5B6C8DAC1EBDC8240044AEDF /* PopularReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C8DAB1EBDC8240044AEDF /* PopularReactor.swift */; };
+		5B6C8DAF1EBDC8C60044AEDF /* PopularGifTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C8DAE1EBDC8C60044AEDF /* PopularGifTrackCell.swift */; };
+		5B6C8DB11EBDC9290044AEDF /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DB01EBDC9290044AEDF /* PopularCell.xib */; };
+		5B6C8DB31EBDC9E00044AEDF /* Popular.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DB21EBDC9E00044AEDF /* Popular.xib */; };
+		5B6C8DB91EBDE9270044AEDF /* confusedtravolta.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DB81EBDE9270044AEDF /* confusedtravolta.gif */; };
+		5B6C8DBC1EBDEC5F0044AEDF /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DBA1EBDEC5F0044AEDF /* favorite.png */; };
+		5B6C8DBD1EBDEC5F0044AEDF /* not_favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DBB1EBDEC5F0044AEDF /* not_favorite.png */; };
+		5B6C8DBF1EBDEF0E0044AEDF /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C8DBE1EBDEF0E0044AEDF /* next.png */; };
 		5B6EADA61EB73DC1003F2BA0 /* HistoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADA51EB73DC1003F2BA0 /* HistoryReactor.swift */; };
 		5B6EADA81EB73DCE003F2BA0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADA71EB73DCE003F2BA0 /* HistoryViewController.swift */; };
 		5B6EADAB1EB74200003F2BA0 /* HistoryGifTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADAA1EB74200003F2BA0 /* HistoryGifTrack.swift */; };
@@ -41,6 +50,9 @@
 		5B6EADB81EB79E23003F2BA0 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADB71EB79E23003F2BA0 /* GifImageView.swift */; };
 		5B6EADBA1EB79F06003F2BA0 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADB91EB79F06003F2BA0 /* HistoryService.swift */; };
 		5B6EADBC1EB7BF3B003F2BA0 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EADBB1EB7BF3B003F2BA0 /* DownloadService.swift */; };
+		5B8278161EBCA2CD00B9A98C /* PopularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8278151EBCA2CD00B9A98C /* PopularService.swift */; };
+		5B8278181EBCA36300B9A98C /* GifTrackPersistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8278171EBCA36300B9A98C /* GifTrackPersistItem.swift */; };
+		5B82781A1EBCA39500B9A98C /* PopulaGifTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8278191EBCA39500B9A98C /* PopulaGifTrack.swift */; };
 		5BDDE76B1EB885730050DFDD /* TrackArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDE76A1EB885730050DFDD /* TrackArtist.swift */; };
 		5BF01FE91EAF45F600D976D7 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF01FE81EAF45F600D976D7 /* UILabel.swift */; };
 		5BF01FED1EAF9E8800D976D7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF01FEC1EAF9E8800D976D7 /* UIImageView.swift */; };
@@ -88,6 +100,15 @@
 		5B278A271EB207C30091EADD /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		5B278A291EB20A630091EADD /* GifData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifData.swift; sourceTree = "<group>"; };
 		5B696F1E1EAD1A1B00F8D4D1 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5B6C8DA91EBDC81A0044AEDF /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
+		5B6C8DAB1EBDC8240044AEDF /* PopularReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularReactor.swift; sourceTree = "<group>"; };
+		5B6C8DAE1EBDC8C60044AEDF /* PopularGifTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularGifTrackCell.swift; sourceTree = "<group>"; };
+		5B6C8DB01EBDC9290044AEDF /* PopularCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
+		5B6C8DB21EBDC9E00044AEDF /* Popular.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Popular.xib; sourceTree = "<group>"; };
+		5B6C8DB81EBDE9270044AEDF /* confusedtravolta.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = confusedtravolta.gif; sourceTree = "<group>"; };
+		5B6C8DBA1EBDEC5F0044AEDF /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		5B6C8DBB1EBDEC5F0044AEDF /* not_favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_favorite.png; sourceTree = "<group>"; };
+		5B6C8DBE1EBDEF0E0044AEDF /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		5B6EADA51EB73DC1003F2BA0 /* HistoryReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryReactor.swift; sourceTree = "<group>"; };
 		5B6EADA71EB73DCE003F2BA0 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5B6EADAA1EB74200003F2BA0 /* HistoryGifTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryGifTrack.swift; sourceTree = "<group>"; };
@@ -97,6 +118,9 @@
 		5B6EADB71EB79E23003F2BA0 /* GifImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
 		5B6EADB91EB79F06003F2BA0 /* HistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		5B6EADBB1EB7BF3B003F2BA0 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		5B8278151EBCA2CD00B9A98C /* PopularService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularService.swift; sourceTree = "<group>"; };
+		5B8278171EBCA36300B9A98C /* GifTrackPersistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTrackPersistItem.swift; sourceTree = "<group>"; };
+		5B8278191EBCA39500B9A98C /* PopulaGifTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulaGifTrack.swift; sourceTree = "<group>"; };
 		5BDDE76A1EB885730050DFDD /* TrackArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackArtist.swift; sourceTree = "<group>"; };
 		5BF01FE81EAF45F600D976D7 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		5BF01FEC1EAF9E8800D976D7 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -184,6 +208,7 @@
 		5B16460D1EAB8F280090A2D3 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				5B6C8DA81EBDC8000044AEDF /* popular */,
 				5B6EADA41EB73DAE003F2BA0 /* history */,
 				5BF01FEE1EAFA0F200D976D7 /* play */,
 				5B16461F1EAB9C0F0090A2D3 /* selectcategory */,
@@ -195,13 +220,13 @@
 		5B1646101EAB91670090A2D3 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				5B82781B1EBCA43C00B9A98C /* persistence */,
 				5B1646131EAB91D10090A2D3 /* base */,
 				5B16461B1EAB97530090A2D3 /* CategoriesService.swift */,
 				5B1D9F651EAFF8E500A9ACE9 /* GiphyService.swift */,
 				5BF1A3101EB4F602007B84C4 /* SpotifyService.swift */,
 				5BF1A3171EB4FCE2007B84C4 /* GifTrackService.swift */,
 				5B6EADB91EB79F06003F2BA0 /* HistoryService.swift */,
-				5B6EADBB1EB7BF3B003F2BA0 /* DownloadService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -244,6 +269,7 @@
 				5B16462D1EABF9650090A2D3 /* SelectCategory.xib */,
 				5BF01FF31EAFA15500D976D7 /* Play.xib */,
 				5B6EADB11EB74939003F2BA0 /* History.xib */,
+				5B6C8DB21EBDC9E00044AEDF /* Popular.xib */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -340,6 +366,24 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		5B6C8DA81EBDC8000044AEDF /* popular */ = {
+			isa = PBXGroup;
+			children = (
+				5B6C8DAD1EBDC8800044AEDF /* view */,
+				5B6C8DA91EBDC81A0044AEDF /* PopularViewController.swift */,
+				5B6C8DAB1EBDC8240044AEDF /* PopularReactor.swift */,
+			);
+			name = popular;
+			sourceTree = "<group>";
+		};
+		5B6C8DAD1EBDC8800044AEDF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5B6C8DAE1EBDC8C60044AEDF /* PopularGifTrackCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		5B6EADA41EB73DAE003F2BA0 /* history */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				5B6EADAA1EB74200003F2BA0 /* HistoryGifTrack.swift */,
+				5B8278171EBCA36300B9A98C /* GifTrackPersistItem.swift */,
+				5B8278191EBCA39500B9A98C /* PopulaGifTrack.swift */,
 			);
 			name = persistence;
 			sourceTree = "<group>";
@@ -363,6 +409,7 @@
 			children = (
 				5B1646341EAC987A0090A2D3 /* SelectCategoryCell.xib */,
 				5B6EADAD1EB7454C003F2BA0 /* HistoryCell.xib */,
+				5B6C8DB01EBDC9290044AEDF /* PopularCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -378,10 +425,23 @@
 		5B6EADB61EB799BD003F2BA0 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				5B6C8DBE1EBDEF0E0044AEDF /* next.png */,
+				5B6C8DBA1EBDEC5F0044AEDF /* favorite.png */,
+				5B6C8DBB1EBDEC5F0044AEDF /* not_favorite.png */,
+				5B6C8DB81EBDE9270044AEDF /* confusedtravolta.gif */,
 				5B16462B1EABCD610090A2D3 /* VT323.ttf */,
 				5B1646011EAB89400090A2D3 /* Assets.xcassets */,
 			);
 			name = assets;
+			sourceTree = "<group>";
+		};
+		5B82781B1EBCA43C00B9A98C /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				5B6EADBB1EB7BF3B003F2BA0 /* DownloadService.swift */,
+				5B8278151EBCA2CD00B9A98C /* PopularService.swift */,
+			);
+			name = persistence;
 			sourceTree = "<group>";
 		};
 		5BF01FEE1EAFA0F200D976D7 /* play */ = {
@@ -493,13 +553,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6C8DBF1EBDEF0E0044AEDF /* next.png in Resources */,
+				5B6C8DBD1EBDEC5F0044AEDF /* not_favorite.png in Resources */,
+				5B6C8DB11EBDC9290044AEDF /* PopularCell.xib in Resources */,
 				5B1646051EAB89400090A2D3 /* LaunchScreen.storyboard in Resources */,
 				5B6EADAE1EB7454C003F2BA0 /* HistoryCell.xib in Resources */,
+				5B6C8DB31EBDC9E00044AEDF /* Popular.xib in Resources */,
 				5BF01FF41EAFA15500D976D7 /* Play.xib in Resources */,
 				5B1646021EAB89400090A2D3 /* Assets.xcassets in Resources */,
 				5B16462C1EABCD610090A2D3 /* VT323.ttf in Resources */,
+				5B6C8DBC1EBDEC5F0044AEDF /* favorite.png in Resources */,
 				5B1646351EAC987A0090A2D3 /* SelectCategoryCell.xib in Resources */,
 				5B6EADB21EB74939003F2BA0 /* History.xib in Resources */,
+				5B6C8DB91EBDE9270044AEDF /* confusedtravolta.gif in Resources */,
 				5B16462E1EABF9650090A2D3 /* SelectCategory.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +627,7 @@
 			files = (
 				5B278A281EB207C30091EADD /* Alamofire.swift in Sources */,
 				5B1646211EAB9C320090A2D3 /* SelectCategoryViewController.swift in Sources */,
+				5B6C8DAF1EBDC8C60044AEDF /* PopularGifTrackCell.swift in Sources */,
 				5B6EADBA1EB79F06003F2BA0 /* HistoryService.swift in Sources */,
 				5BF1A31A1EB4FDA5007B84C4 /* GifTrackSaved.swift in Sources */,
 				5B6EADB51EB74BE6003F2BA0 /* HistoryGifTrackCell.swift in Sources */,
@@ -573,18 +640,23 @@
 				5B16461C1EAB97530090A2D3 /* CategoriesService.swift in Sources */,
 				5BF01FE91EAF45F600D976D7 /* UILabel.swift in Sources */,
 				5B6EADB81EB79E23003F2BA0 /* GifImageView.swift in Sources */,
+				5B6C8DAA1EBDC81A0044AEDF /* PopularViewController.swift in Sources */,
 				5B16460F1EAB8F500090A2D3 /* BaseViewController.swift in Sources */,
 				5B1646001EAB89400090A2D3 /* GifTV.xcdatamodeld in Sources */,
+				5B8278181EBCA36300B9A98C /* GifTrackPersistItem.swift in Sources */,
 				5BF1A30B1EB4EFDE007B84C4 /* Pagination.swift in Sources */,
 				5B1646231EAB9C490090A2D3 /* SelectCategoryReactor.swift in Sources */,
 				5B6EADA81EB73DCE003F2BA0 /* HistoryViewController.swift in Sources */,
 				5B1646121EAB91760090A2D3 /* BaseService.swift in Sources */,
 				5BF1A30E1EB4F0E5007B84C4 /* Range.swift in Sources */,
+				5B82781A1EBCA39500B9A98C /* PopulaGifTrack.swift in Sources */,
 				5BF1A3111EB4F602007B84C4 /* SpotifyService.swift in Sources */,
 				5BDDE76B1EB885730050DFDD /* TrackArtist.swift in Sources */,
 				5BF1A31C1EB4FFC2007B84C4 /* GifSaved.swift in Sources */,
 				5BF1A3141EB4F928007B84C4 /* TrackData.swift in Sources */,
+				5B8278161EBCA2CD00B9A98C /* PopularService.swift in Sources */,
 				5BF1A3201EB50333007B84C4 /* TrackItem.swift in Sources */,
+				5B6C8DAC1EBDC8240044AEDF /* PopularReactor.swift in Sources */,
 				5BF01FF01EAFA10B00D976D7 /* PlayViewController.swift in Sources */,
 				5B696F1F1EAD1A1B00F8D4D1 /* UIView.swift in Sources */,
 				5B6EADBC1EB7BF3B003F2BA0 /* DownloadService.swift in Sources */,
