@@ -51,7 +51,7 @@ class SelectCategoryViewController : BaseViewController, View {
         
         self.dataSource.configureCell = { _, collectionView, indexPath, category in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectCategoryCell.identifier, for: indexPath) as! SelectCategoryCell
-            cell.text.text = category.title
+            cell.text.text = category.title.uppercased()
             cell.text.isUserInteractionEnabled = true
             return cell
         }
