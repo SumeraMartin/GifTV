@@ -31,7 +31,7 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Title" id="jiQ-me-L6X">
+                        <navigationItem title="History" id="jiQ-me-L6X">
                             <barButtonItem key="backBarButtonItem" title="Back" id="Bgs-Iw-7Aa"/>
                         </navigationItem>
                     </items>
