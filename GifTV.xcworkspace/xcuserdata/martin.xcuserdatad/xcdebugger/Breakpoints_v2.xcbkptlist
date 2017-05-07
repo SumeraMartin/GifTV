@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GifTV/CategoriesService.swift"
-            timestampString = "514628367.718603"
+            timestampString = "515865509.845026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "fetchCategories()"
             landmarkType = "7">
          </BreakpointContent>
