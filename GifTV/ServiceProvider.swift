@@ -14,6 +14,8 @@ protocol ServiceProviderType: class {
     
     var spotifyService: SpotifyService { get }
     
+    var spotifyTokenService: SpotifyTokenService { get }
+    
     var gifTrackService: GifTrackService { get }
     
     var historyService: HistoryService { get }
@@ -30,6 +32,8 @@ final class ServiceProvider: ServiceProviderType {
     lazy var giphyService: GiphyService = GiphyService(provider: self)
     
     lazy var spotifyService: SpotifyService = SpotifyService(provider: self)
+    
+    lazy var spotifyTokenService: SpotifyTokenService = SpotifyTokenService(provider: self)
     
     lazy var gifTrackService: GifTrackService = GifTrackService(provider: self)
     

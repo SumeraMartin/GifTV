@@ -22,12 +22,13 @@ class PlayReactor: BaseReactor {
         self.query = query
         
         self.initialState = State(
+            isError: false,
             isLoading: false,
             isFavorite: false,
             gifTrack: nil
         )
     }
-        
+    
     func mutate(action: Action) -> Observable<Mutation> {
         actionSubject.onNext(action)
         switch action {
@@ -35,6 +36,7 @@ class PlayReactor: BaseReactor {
                 return self.getGifTrack(byQuery: self.query)
                     .startWith(.showLoading)
                     .takeUntil(self.actionSubject.filter { $0 == Action.onViewWillDisappear })
+                    .catchErrorJustReturn(.showError)
         case let .onGifLoaded(gifTrack):
                 self.addToHistory(gifTrack)
                 
@@ -46,6 +48,7 @@ class PlayReactor: BaseReactor {
                 return Observable.zip(getGif, waitSeveralSeconds)
                     .map { (gif, __) in gif }
                     .takeUntil(self.actionSubject.filter { $0 == Action.onViewWillDisappear })
+                    .catchErrorJustReturn(.showError)
             case .onGifClicked:
                 return Observable.just(.showLoading)
             case .onViewWillDisappear:
@@ -72,6 +75,9 @@ class PlayReactor: BaseReactor {
             case .markAsFavorite:
                 state.isFavorite = true
                 return state
+            case .showError:
+                state.isError = true
+            return state
         }
     }
         
@@ -107,9 +113,11 @@ extension PlayReactor {
         case showLoading
         case showGifTrack(GifTrackSaved)
         case markAsFavorite
+        case showError
     }
     
     struct State {
+        var isError: Bool
         var isLoading: Bool
         var isFavorite: Bool
         var gifTrack: GifTrackSaved?

@@ -35,6 +35,12 @@ class PlayViewController : BaseViewController, ReactorKit.View {
     
     @IBOutlet weak var infoSubtitle: UILabel!
     
+    @IBOutlet weak var error: UIView!
+    
+    @IBOutlet weak var errorBottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var errorTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var favoriteImage: UIImageView!
     
     @IBOutlet weak var nextImage: UIImageView!
@@ -88,6 +94,7 @@ class PlayViewController : BaseViewController, ReactorKit.View {
         self.gifView.isUserInteractionEnabled = true
         
         self.showLoading(withAnimation: false)
+        self.hideError()
         
         infoViewBottomConstraint.constant = -infoViewHiddenOffset
         
@@ -106,6 +113,14 @@ class PlayViewController : BaseViewController, ReactorKit.View {
                     self.hideInfo()
                     self.hideLoading()
                 }
+            })
+            .addDisposableTo(self.disposeBag)
+        
+        reactor.state
+            .filter { $0.isError }
+            .subscribe(onNext: { _ in
+                self.showError()
+                self.stopAudio()
             })
             .addDisposableTo(self.disposeBag)
         
@@ -238,6 +253,23 @@ class PlayViewController : BaseViewController, ReactorKit.View {
             self.infoViewBottomConstraint.constant += 0
             self.view.layoutIfNeeded()
         })
+    }
+    
+    private func showError() {
+        self.view.layoutIfNeeded()
+        self.errorBottomConstraint.constant = self.view.frame.height
+        self.errorTopConstraint.constant = -self.view.frame.height
+        UIView.animate(withDuration: 0.4, animations: {
+            self.errorBottomConstraint.constant -= self.view.frame.height
+            self.errorTopConstraint.constant += self.view.frame.height
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    private func hideError() {
+        self.errorBottomConstraint.constant = 2 * -self.view.frame.height
+        self.errorTopConstraint.constant = 2 * self.view.frame.height
+        self.view.layoutIfNeeded()
     }
     
     private func hideInfo() {

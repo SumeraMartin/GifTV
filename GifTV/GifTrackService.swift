@@ -26,7 +26,7 @@ class GifTrackService: BaseService, GifTrackServiceType {
                     .map { track in GifTrackSaved(gif, track) }
             }
             .debug("GIFTRACK")
-            .retry()
+            .retry(20)
     }
     
     private func createTags(from gifSaved: GifSaved, or defaultQuery: String, separator: String = " ") -> String {

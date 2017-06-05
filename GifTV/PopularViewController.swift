@@ -61,6 +61,7 @@ class PopularViewController : BaseViewController, View {
             cell.title.text = popularGifTrack.trackArtistName
             cell.subtitle.text = popularGifTrack.trackName
             cell.gifImageView.animate(fromPath: popularGifTrack.gifLocalPath)
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         }
         

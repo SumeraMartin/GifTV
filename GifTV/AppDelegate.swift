@@ -20,11 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool{
         
-//        let realm = try! Realm()
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
-        
         return true
     }
     

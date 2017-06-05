@@ -60,6 +60,7 @@ class HistoryViewController : BaseViewController, View {
             let cell = tableView.dequeueReusableCell(withIdentifier: HistoryGifTrackCell.identifier, for: indexPath) as! HistoryGifTrackCell
             cell.title.text = historyGifTrack.trackArtistName
             cell.subTitle.text = historyGifTrack.trackName
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             cell.gifImageView.animate(fromPath: historyGifTrack.gifLocalPath)
             return cell
         }

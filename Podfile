@@ -26,4 +26,7 @@ target 'GifTV' do
   # Persistence
   pod 'RealmSwift'
   
+  # OAuth
+  pod 'OAuthSwift', '~> 1.1.0'
+  
 end

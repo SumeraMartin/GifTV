@@ -17,9 +17,14 @@ protocol SpotifyServiceType {
 
 class SpotifyService : BaseService, SpotifyServiceType {
     
+    var token = ""
+    
     func downloadTrack(byQuery query: String) -> Observable<TrackSaved> {
-        return self.getTrackCount(byQuery: query)
-  //          .flatMap { count in self.getTrack(byQuery: query, withOffset: (0...min(100000,count)).random) }
+        return self.provider.spotifyTokenService.getToken()
+            .do(onNext: { token in
+                self.token = token
+            })
+            .flatMap { __ in self.getTrackCount(byQuery: query) }
             .flatMap { count in self.getTrack(byQuery: query, withOffset: (0...min(10,count)).random) }
             .flatMap { track in self.downloadTrack(track) }
     }
@@ -27,7 +32,7 @@ class SpotifyService : BaseService, SpotifyServiceType {
     private func getTrackCount(byQuery query: String) -> Observable<Int> {
         return Observable.create { observer in
             let request = Alamofire
-                .request(Router.count(query: query))
+                .request(Router.count(token: self.token, query: query))
                 .log()
                 .responseObject(TrackData.self) { response in
                     switch response.result {
@@ -48,7 +53,7 @@ class SpotifyService : BaseService, SpotifyServiceType {
     private func getTrack(byQuery query: String, withOffset offset: Int) -> Observable<Track> {
         return Observable.create { observer in
             let request = Alamofire
-                .request(Router.search(query: query, offset: offset))
+                .request(Router.search(token: self.token, query: query, offset: offset))
                 .log()
                 .responseObject(TrackData.self) { response in
                     switch response.result {
@@ -100,8 +105,8 @@ class SpotifyService : BaseService, SpotifyServiceType {
 extension SpotifyService {
     
     enum Router: URLRequestConvertible {
-        case search(query: String, offset: Int)
-        case count(query: String)
+        case search(token: String, query: String, offset: Int)
+        case count(token: String, query: String)
         
         static let baseUrl = "https://api.spotify.com/v1/"
         
@@ -112,15 +117,22 @@ extension SpotifyService {
         func asURLRequest() throws -> URLRequest {
             let result: (path: String, parameters: Parameters) = {
                 switch self {
-                    case let .search(query, offset):
+                    case let .search(_, query, offset):
                         return ("search", ["type": "track", "limit": 1, "offset": offset, "q": query])
-                    case let .count(query):
+                    case let .count(_, query):
                         return ("search", ["type": "track", "limit": 1, "q": query])
                 }
             }()
             
             let url = try Router.baseUrl.asURL()
-            let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
+            var urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
+            switch self {
+                case let .search(token, _, _):
+                    urlRequest.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+                case let .count(token, _):
+                    urlRequest.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+            }
+            urlRequest.httpMethod = method.rawValue
             return try URLEncoding.default.encode(urlRequest, with: result.parameters)
         }
     }
