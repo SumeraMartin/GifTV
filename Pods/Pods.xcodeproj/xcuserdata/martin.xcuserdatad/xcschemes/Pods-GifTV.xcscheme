@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5EBD5A1AF9498E8563B865800447903"
+               BlueprintIdentifier = "A50F76790CBAE842864000F08F0FA26D"
                BuildableName = "Pods_GifTV.framework"
                BlueprintName = "Pods-GifTV"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5EBD5A1AF9498E8563B865800447903"
+            BlueprintIdentifier = "A50F76790CBAE842864000F08F0FA26D"
             BuildableName = "Pods_GifTV.framework"
             BlueprintName = "Pods-GifTV"
             ReferencedContainer = "container:Pods.xcodeproj">

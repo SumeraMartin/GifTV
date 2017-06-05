@@ -7,7 +7,6 @@ PODS:
     - Gloss (~> 1.0)
   - Gifu (2.0.0)
   - Gloss (1.2.4)
-  - OAuthSwift (1.1.1)
   - ReactorKit (0.2.0):
     - RxSwift (>= 3.0.0)
   - Realm (2.6.2):
@@ -33,7 +32,6 @@ DEPENDENCIES:
   - Alamofire-Gloss
   - Gifu
   - Gloss (~> 1.2)
-  - OAuthSwift (~> 1.1.0)
   - ReactorKit
   - RealmSwift
   - RxCocoa (~> 3.1)
@@ -47,7 +45,6 @@ SPEC CHECKSUMS:
   Alamofire-Gloss: dea192a13e23d323415e80e9b18d53915fd484bf
   Gifu: 56a4d8f1092399159fa32662aa2232158b48d8ac
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
-  OAuthSwift: 6e3a103b3e5639411769cc7e199ec7e14bd1547f
   ReactorKit: e9a57be0441a28878c418f5fea0f8f2587570563
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
@@ -57,6 +54,6 @@ SPEC CHECKSUMS:
   RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
   RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
 
-PODFILE CHECKSUM: bc3bac81776b108bd9848a4b940b5eb844ca3746
+PODFILE CHECKSUM: a76888a12bfac35e4e7d32d0e13b6bd6024e6f39
 
 COCOAPODS: 1.2.1
